@@ -4,7 +4,7 @@ import { UserController } from "./application/userController";
 
 @bootstrap()
 export class App implements IBootstrap {
-  @inject(UserController) private userController!: UserController;
+  @inject() private userController!: UserController;
 
   run() {
     console.log("App starts here");

@@ -11,7 +11,7 @@ export interface UserController {
 @define()
 @singleton()
 export class UserController implements UserController {
-  @inject(UserService) private userService!: UserService;
+  @inject() private userService!: UserService;
 
   getUsers() {
     return this.userService.getUsers();
